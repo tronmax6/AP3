@@ -7,6 +7,6 @@ if (isset($_GET['id'])) {
   // Récupération d'un produit spécifique...
 } else {
   $produits = $bdd->getProduits();
-  require "../View/view_produits.php";
+  require "../View/selectRayon.php";
 }
 ?>

@@ -1,5 +1,5 @@
 <?php
-include "../View/header.php"
+include "header.php"
 ?>
 
 <h1>Produits</h1>
@@ -15,13 +15,15 @@ include "../View/header.php"
   <tbody>
     <?php
     foreach ($produits as $produit) {
-      echo "<tr>";
-      echo "<td>" . $produit['pr_id'] . "</td>";
-      echo "<td>" . $produit['pr_nom'] . "</td>";
-      echo "</tr>";
-    }
+      ?>
+      <a href='ProduitChoisie.php?produit=<?php echo $produit['pr_id']?>
+    <?php  echo "<tr>"?>
+    <?php  echo "<td>" . $produit['pr_id'] . "</td>"?>'> 
+    <?php  echo "<td>" . $produit['pr_nom'] . "</td>"?>bouton </a>
+    <?php  echo "</tr>" ?>
+    <?php }
 
     ?>
   </tbody>
-
 </table>
+<?php require '../footer.php';?>
